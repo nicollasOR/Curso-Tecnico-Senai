@@ -1,0 +1,12 @@
+body
+{
+    background-color: var(--branco);
+    color: var(--texto-escuro);
+}
+
+.tela-cadastro
+{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 100vh;
+}
