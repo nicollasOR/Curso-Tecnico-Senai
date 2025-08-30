@@ -3,10 +3,46 @@ body
     background-color: var(--branco);
     color: var(--texto-escuro);
 }
-
-.tela-cadastro
+.cadastro-inteiro
 {
     display: grid;
     grid-template-columns: 1fr 2fr;
     height: 100vh;
 }
+
+.tela-cadastro
+{
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: flex-end;
+ margin: 50px;
+ padding: 40px;
+ 
+ background-color: black;
+ color: var(--branco);
+
+}
+
+.logo
+{
+   width: 50%;
+   margin: 50px 0 10px; 
+}
+
+.titulo
+{
+    margin: 0 0 60px;
+    font-size: 0.9em;
+    font-weight: 300;
+    color: red;
+}
+
+
+
+.subtitulo
+{
+ font-size: 0.9em;
+ color: red;
+}
+
