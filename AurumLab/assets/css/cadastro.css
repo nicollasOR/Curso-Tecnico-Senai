@@ -1,12 +1,46 @@
+
 body
 {
     background-color: var(--branco);
     color: var(--texto-escuro);
 }
+.cadastro-inteiro
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 10vh;
+}
 
 .tela-cadastro
 {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    height: 100vh;
+ display: grid;
+ grid-template-columns: 1fr;
+ align-items: center;
+ justify-content: flex-end;
+ 
+ 
+ color: var(--texto-escuro);
+
+}
+
+.logo
+{
+   width: 20%;
+   margin: 50px; 
+}
+
+.titulo
+{
+    margin: 0 0 60px;
+    font-size: 0.9em;
+    font-weight: 300;
+    color: red;
+}
+
+
+
+.subtitulo
+{
+ font-size: 0.9em;
+ color: red;
 }

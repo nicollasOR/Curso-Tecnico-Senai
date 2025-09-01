@@ -161,3 +161,64 @@ width: 100%;
     display: none;
     
 }
+
+.logo-resp
+{
+    display: none;
+}
+
+
+/*Responsividade - Media Query*/
+
+@media (max-width: 900px) {
+    .container-login{
+        grid-template-columns: 1fr; 
+    }
+    .painel-esquerdo
+    {
+        margin: 0;
+    }
+    .descricao
+    {
+        font-size: 1.1em;
+        max-width: 55%;
+    }
+    .logo{
+        display: none;
+    }
+    .logo-resp
+    {
+    display: inline;
+    margin-bottom: 50px;
+    }
+
+
+
+}
+
+@media (max-width: 500px) {
+    .container-login{
+        grid-template-columns: 1fr; 
+    }
+    .painel-esquerdo
+    {
+        margin: 0;
+    }
+    .descricao
+    {
+        font-size: 1.1em;
+        max-width: 55%;
+    }
+    .logo{
+        display: none;
+    }
+    .logo-resp
+    {
+    display: inline;
+    margin-bottom: 1em;
+    }
+
+
+
+}
+
