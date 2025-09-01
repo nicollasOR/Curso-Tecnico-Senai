@@ -1,33 +1,22 @@
-body
+/* body
 {
     background-color: var(--branco);
     color: var(--texto-escuro);
 }
-.cadastro-inteiro
-{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    height: 100vh;
-}
 
 .tela-cadastro
 {
- display: flex;
- flex-direction: row;
- align-items: center;
- justify-content: flex-end;
- margin: 50px;
- padding: 40px;
- 
- background-color: black;
- color: var(--branco);
-
+    background-color: rgb(255, 0, 0);
+    display: flex;
+    height: 20vh;
+    border-radius: 1vh;
+    
 }
 
 .logo
 {
-   width: 50%;
-   margin: 50px 0 10px; 
+    width: 50%;
+    margin: 50px 0 10px;
 }
 
 .titulo
@@ -35,14 +24,72 @@ body
     margin: 0 0 60px;
     font-size: 0.9em;
     font-weight: 300;
-    color: red;
 }
 
-
-
-.subtitulo
+.substitulo
 {
- font-size: 0.9em;
- color: red;
+    color: var(--amarelo);
+    font-weight: 600;
+    margin-top: 50px;
+    text-decoration: underline;
+} */
+
+body
+{
+    background-color: var(--branco);
+    color: var(--texto-escuro);
+
 }
+
+.tela-cadastro {
+    margin: 2vh;
+    background-color: var(--fundo); 
+    color: var(--branco);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 20vh;
+    border-radius: 2vh;
+    padding: 1vh;
+}
+
+.textos-cadastro
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    padding: 1vh;
+    gap: 0.5vh;
+    margin-top: 5vh; 
+    
+}
+.logo {
+
+    width: 10vh;
+    margin-top: 4vh;
+    display: flex;
+    justify-self: flex-end;
+       
+}
+
+.titulo {
+    color: var(--branco);
+    font-size: 2em;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+       
+}
+
+.subtitulo {
+    color: var(--branco);
+    font-weight: 400;
+    margin-top: 10px;
+    text-decoration: underline;
+    display: flex;
+    justify-content: flex-start;    
+}
+
+
+
 

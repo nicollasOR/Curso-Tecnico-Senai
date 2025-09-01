@@ -4,26 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/cadastro.css">
+    
 </head>
 <body>
     <main class="cadastro-inteiro">
         <section class="tela-cadastro">
-            <img src="assets/img/icone-logo.svg" alt="Logo Aurum Lab" class="logo">
+        <div class="textos-cadastro">
             <p class="titulo">Cadastro</p>
             <p class="subtitulo">Crie uma nova conta de usuário para o Aulum Lab</p>
+        </div>
+            <img src="assets/img/icone-logo.svg" alt="Logo Aurum Lab" class="logo">
         </section>
+        <section class="paineis">
     <form class="painel-direito">
         <section class="painel-superior-esquerdo">
             <label for="nome">Nome completo:</label>
-            <input type="nome" id="nome" placeholder="seu nome" required>
+            <input type="nome" class="nome" placeholder="seu nome" required>
                 
 
         </section>
         <section class="painel-superor-direito">
             <div class="campo-senha">
-                <input type="password" id="senha" placeholder="*********" required>
+               <label for="senha">Senha</label>
+               <input type="password" id="senha" placeholder="sua senha" required>
+
                 <span class="icone-olho">
                 </span>
               </div>
@@ -33,18 +39,19 @@
     <form class="painel-esquerdo">
         <section class="painel-inferior-esquerdo">
             <label for="email">E-mail:</label>
-            <input type="email" id="email" placeholder="email@email.com" required>
+            <input type="email" class="email" placeholder="email@email.com" required>
 
         </section>
         <section class="painel-inferior-direito">
             <div class="campo-senha">
-                <input type="password" id="senha" placeholder="*********" required>
+                <label for="password" class="senha-confirma" placeholder="*********" required> </label>
                 <span class="icone-olho">
                   <img src="assets/icon/eye.svg" alt="">
                 </span>
               </div>
         </section>
     </form>
+    </section>
     </main>
 </body>
 </html>
