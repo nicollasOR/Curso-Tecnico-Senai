@@ -168,7 +168,7 @@ placeholder
 
 @media (max-width: 390px)
 {
-   .tela-cadastro{}
+   .tela-cadastro{ margin: auto;}
 
    .logo{width: 5vh;}
 }
