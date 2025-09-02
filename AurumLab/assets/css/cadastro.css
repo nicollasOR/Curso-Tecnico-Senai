@@ -1,41 +1,4 @@
-/* body
-{
-    background-color: var(--branco);
-    color: var(--texto-escuro);
-}
-
-.tela-cadastro
-{
-    background-color: rgb(255, 0, 0);
-    display: flex;
-    height: 20vh;
-    border-radius: 1vh;
-    
-}
-
-.logo
-{
-    width: 50%;
-    margin: 50px 0 10px;
-}
-
-.titulo
-{
-    margin: 0 0 60px;
-    font-size: 0.9em;
-    font-weight: 300;
-}
-
-.substitulo
-{
-    color: var(--amarelo);
-    font-weight: 600;
-    margin-top: 50px;
-    text-decoration: underline;
-} */
-
-body
-{
+body {
     background-color: var(--branco);
     color: var(--texto-escuro);
 
@@ -43,7 +6,7 @@ body
 
 .tela-cadastro {
     margin: 2vh;
-    background-color: var(--fundo); 
+    background-color: var(--fundo);
     color: var(--branco);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -52,23 +15,23 @@ body
     padding: 1vh;
 }
 
-.textos-cadastro
-{
+.textos-cadastro {
     display: grid;
     grid-template-columns: 1fr;
     flex-direction: column;
     padding: 1vh;
     gap: 0.5vh;
-    margin-top: 5vh; 
-    
+    margin-top: 5vh;
+
 }
+
 .logo {
 
     width: 10vh;
     margin-top: 4vh;
     display: flex;
     justify-self: flex-end;
-       
+
 }
 
 .titulo {
@@ -78,7 +41,7 @@ body
     display: flex;
     justify-content: flex-start;
     text-align: left;
-       
+
 }
 
 .subtitulo {
@@ -87,9 +50,100 @@ body
     margin-top: 10px;
     text-decoration: underline;
     display: flex;
-    justify-content: flex-start;    
+    justify-content: flex-start;
+}
+
+input {
+    padding: 1.15vh;
+    border: 1px solid var(--borda);
+    border-radius: 1.4vh;
+    font-size: 1rem;
+    width: 90%;
+}
+
+.cadastro-paineis {
+    height: 30vh;
+    margin: 5vh 5vh;
+
+}
+
+.paineis {
+    display: flex;
+    justify-content: space-between;
+
+
+    height: 40vh;
+}
+
+.painel-esquerdo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45%;
+    height: 20vh;
+    margin-top: 10vh;
 }
 
 
+.painel-direito {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45%;
+    height: 20vh;
+    margin-top: 10.555vh;
+}
+
+.texto-aviso {
+    font-weight: 300;
+    font-size: 1.2em;
+}
 
 
+.botoes {
+    display: grid;
+    height: 20vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+    margin: 5vh;
+}
+
+.botao-cadastro {
+    background-color: var(--fundo);
+    color: var(--amarelo);
+    border: none;
+    border-radius: 1.4vh;
+    font-weight: 700;
+    font-size: 1rem;
+    width: 10vh;
+    padding: 1vh;
+
+}
+
+.botao-cadastro:hover {
+    cursor: pointer;
+    background-color: #24354D;
+    color: #FFD700;
+}
+
+.botao-voltar {
+    background-color: white;
+    text-decoration: underline;
+    color: var(--texto-escuro);
+    display: flex;
+    justify-content: center;
+    margin-top: -10vh;
+}
+.botao-voltar:hover {
+    cursor: pointer;
+    color: var(--amarelo);
+}
+
+.olho
+{
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
