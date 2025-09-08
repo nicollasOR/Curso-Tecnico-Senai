@@ -8,3 +8,4 @@ alert("Valor foi reajustado para  ${valorNovo.toFixed(2)}");
 }
 else
 alert("O valor eh " + valorProduto);
+
