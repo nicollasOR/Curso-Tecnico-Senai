@@ -127,17 +127,75 @@
 
 //  Maior numero do array
 
-const numeros = [10, 5, 8, 20, 3];
-const maiorNumero = numeros.reduce((max, numero) =>{
-        if(numero > max)
-        {
-           return numero;
-        }
-        else{
-            return max;
-        }}, numeros[0]
-        )
+// const numeros = [10, 5, 8, 20, 3];
+// const maiorNumero = numeros.reduce((max, numero) =>{
+//         if(numero > max)
+//         {
+//            return numero;
+//         }
+//         else{
+//             return max;
+//         }}, numeros[0]
+//         )
 
 
-        console.log(maiorNumero);
+//         console.log(maiorNumero);
 
+
+// Contar a frequencia de palavras
+
+const palavras = [`maca`, `banana`, `maca`, `laranja`, `banana`, `laranja`, ]
+
+const contagem = palavras.reduce((acumulador, palavra) => 
+{
+    acumulador[palavra] = (acumulador[palavra] || 0) + 1
+    return acumulador
+}, {})
+// Um objeto cujo observa quantas palavras existe na caixa (acumulador) e se nao tem nenhuma ele acrescenta uma (ele nao pega direto do array, ele pega conforme existe palavras identicas no array depois)
+
+console.log(contagem)
+
+
+const notas = [7, 8, 9, 6 , 10]
+
+const media = notas.reduce((total, notas) => total + notas, 0 / notas.length);
+
+console.log(media);
+
+// uso combinado
+
+const usuario = 
+[
+    {
+        id: 1, nome: `Bob`, idade: 18
+    },
+
+    
+    {
+        id: 3, nome: `Carol`, idade: 21
+    },
+
+    {
+        id: 2, nome: `Alice`, idade: 25
+    },
+
+
+]
+
+//filtrar idades maiores que 21
+
+const maioresDezoito = usuario.filter(usuario => usuario.idade > 18)
+console.log(maioresDezoito)
+
+const usuarioIdade = usuario.find(usuario => usuario.idade > 21);
+console.log(usuarioIdade)
+
+//criar um novo array com nomes de usuarios
+const usuariosNomes = usuario.map( usuario => usuario.nome)
+
+console.log(usuariosNomes)
+
+//somar todas as idades
+
+const idadeSomada = usuario.reduce((total, usuario) => total + usuario.idade, 0)
+console.log(idadeSomada)
