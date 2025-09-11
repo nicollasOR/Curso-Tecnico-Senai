@@ -24,7 +24,7 @@ console.log(numeros_perfeitos)
 
 /*
 let numero_max = Number(prompt("Digite um numero ai: "));
-let perfeitos = []; // aqui vai guardar todos os números perfeitos encontrados
+let perfeitos = []; 
 
 for (let n_test = 1; n_test <= numero_max; n_test++) {
     let somaDivisores = 0;
@@ -36,7 +36,7 @@ for (let n_test = 1; n_test <= numero_max; n_test++) {
     }
 
     if (somaDivisores === n_test) {
-        perfeitos.push(n_test); // adiciona ao array em vez de só mostrar
+        perfeitos.push(n_test); // adiciona o resultado a um array 
     }
 }
 
