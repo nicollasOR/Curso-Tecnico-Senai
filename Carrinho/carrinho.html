@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styleGlobal.css">
+    <link rel="stylesheet" href="assets/css/carrinhoStyle.css">
+    <script defer src="assets/js/carrinho.js"></script>
+    <title>Carrinho</title>
+</head>
+
+<body>
+    <main class="tela">
+        <aside class="tela-esquerda">
+
+            <section class="tela-esquerda">
+                <p class="forma-pagamento">Formas de Pagamento: </p>
+                <div class="line2"></div>
+
+                <ul class="quadros">
+                    <li class="aba boleto">
+                        <span class="texto-esquerda boleto">Boleto</span>
+                        <img src="assets/img/svg/Boleto.svg" alt="boleto-image" class="svg">
+                        <a href="carrinhoBoleto.html">&leftarrow;</a>
+                    </li>
+                    <div class="linha"></div>
+                    <li class="aba cartao">
+                        <span class="texto-esquerda cartao">Cartão</span>
+                        <img src="assets/img/svg/Card.svg" alt="cartao-image" class="svg">
+                        <a href="carrinhoCartao.html"> &leftarrow; </a>
+                    </li>
+                    <div class="linha"></div>
+                    <li class="aba pix">
+                        <span class="texto-esquerda">Pix</span>
+                        <img src="assets/img/svg/PIX.svg" alt="pix-image" class="svg pix">
+                        <a href="carrinhoPIX.html">&leftarrow;</a>
+                       
+                    </li>
+                    <div class="linha"></div>
+
+                </ul>
+            </section>
+        </aside>
+        <aside class="tela-direita">
+            <div class="banner-carrinho">
+                <h3>Meu carrinho:</h3>
+                <div class="linha"></div>
+                <ul class="produtos">
+                    <li class="produto">
+                        <div class="imagem"></div>
+                        <div class="texto-produto"><p class="nome-produto"> produto 1 <p class="quantidade">ee</p><p class="preco">eee</p></p></div>
+                    </li>
+                    <div class="linha"></div>
+
+                    <li class="produto">
+                        <div class="imagem"></div>
+                        <div class="texto-produto"><p class="nome-produto"> produto 2 <p class="quantidade">ee</p><p class="preco">eee</p></p></div>
+                    </li>
+                    <div class="linha"></div>
+
+
+                    <li class="produto">
+                        <div class="imagem"></div>
+                        <div class="texto-produto"><p class="texto-produtos"> produto 3 <p class="quantidade">ee</p><p class="preco">eee</p></p></div>
+                    </li>
+
+                    <div class="linha"></div>
+
+                </ul>
+                <div class="pagamento">
+                    <h3 class="">Total: <p class="soma"></p> R$</h3>
+                </div>
+            </div>
+            <div class="efetuar-pagamento">
+                <button type="submit" class="pagamentos">Finalizar Pedido</button>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>
