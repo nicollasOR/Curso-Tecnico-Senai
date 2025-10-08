@@ -1,3 +1,5 @@
+USE BIBLIOTECA2;
+
 /*
 
 
@@ -70,6 +72,8 @@ GO
 
 */
 
+
+
 -- COUNT - contar o total de registros // Tabelas
 
 SELECT * FROM Leitor;
@@ -86,6 +90,10 @@ FROM Emprestimo e
 JOIN Leitor l ON l.idLeitor = e.id_Leitor
 GROUP BY l.nome
 */
+
+
+
+
 
 
 -- MIN y MAX
@@ -158,3 +166,162 @@ FROM Leitor;
 SELECT GETDATE() AS DataAtual;
 SELECT SYSDATETIMEOFFSET()
 AT TIME ZONE 'E. South America Standard Time';
+
+--DATEADD
+/*
+
+Adiciona um tempo a mais dentro de uma data
+YEAR: Ano, MONTH: MES, DAY: DIA, WEEK: SEMANA
+
+*/
+
+SELECT * FROM Emprestimo
+
+SELECT id_Emprestimo, data_emprestimo,
+DATEADD(YEAR, 7, data_emprestimo) AS PrevisaoDevolucao
+FROM Emprestimo;
+
+
+--Diminuir o tempo
+SELECT id_Emprestimo, data_emprestimo, 
+DATEADD(MONTH, -1, data_emprestimo) AS PrevisaoDevolucao
+FROM Emprestimo;
+
+--DATEDIFF - Diferenca entre datas
+SELECT id_emprestimo, data_emprestimo, data_devolucao,
+DATEDIFF(DAY, data_emprestimo, ISNULL(data_devolucao, GETDATE())) AS PrevisaoDevolucao
+FROM Emprestimo
+-- IF(data_devolucao == Null) for(GETDATE = 0; GETDATE >= Null; GETDATE++;) 
+--else(print)
+
+
+--FORMAT: FORMATAR DATAS
+
+SELECT * FROM Emprestimo
+
+SELECT
+FORMAT(data_emprestimo, 'dd-MM-yyyy') AS Emprestimo,
+FORMAT(data_devolucao, 'dd-MM-yyyy') AS Devolucao
+FROM Emprestimo;
+
+
+--Extrair ano, mes e dia de uma data
+SELECT YEAR(data_emprestimo) AS ANO,
+MONTH(data_emprestimo) AS Mes,
+DAY(data_emprestimo) AS Dia
+FROM Emprestimo
+
+--DATEPART y DATENAME
+
+SELECT 
+DATEPART(YEAR, data_emprestimo) AS ano,
+DATEPART(MONTH, data_emprestimo) AS mes,
+DATEPART(WEEKDAY, data_emprestimo) AS DiaSemana,
+DATENAME(WEEKDAY, data_emprestimo) AS NomeDiaSemana,
+DATENAME(MONTH, data_emprestimo) AS NomeMes
+FROM Emprestimo;
+
+--alterar idioma
+SET LANGUAGE Portuguese;
+
+--Operadores de comparacao
+
+
+--igualdade =
+
+SELECT titulo, ano
+FROM Livro
+WHERE ano = 2000;
+
+--diferente NOT LIKE
+
+SELECT nome, email
+FROM Leitor
+WHERE email NOT LIKE 'kes%'
+--eh preconceitoso, se nao for alguem que ele goste comeca a excluilo
+
+SELECT titulo, ano FROM Livro 
+WHERE ano <> 2000;
+
+
+SELECT titulo, ano
+FROM Livro 
+WHERE ano > 1900
+
+-- menor que 
+SELECT titulo, ano, 
+FROM Livro
+WHERE ano < 2000;
+
+SELECT id_emprestimo, data_emprestimo
+FROM Emprestimo
+WHERE data_emprestimo <= '2025-09-01';
+
+
+--operadores logicos
+--AND (E)
+
+SELECT
+Emprestimo.id_emprestimo, Leitor.nome,
+Emprestimo.data_emprestimo, Emprestimo.data_devolucao
+FROM Emprestimo
+JOIN Leitor ON Leitor.id_Leitor = Emprestimo.id_Leitor
+WHERE 
+MONTH(Emprestimo.data_emprestimo) = 9
+AND
+YEAR(Emprestimo.data_emprestimo) = 2025
+
+--Duas condicoes verdadeiras
+
+
+-- || (ou) OR
+
+SELECT L.titulo, L.ano, A.nome
+FROM Livro L
+JOIN Autor A ON A.id_Autor = L.id_Autor
+WHERE 
+A.nome = 'Machado de Assis'
+OR
+A.nome = 'Clarice Lispector'
+
+--Se um tiver V ja nao vai retornar NaN || Null
+
+-- NOT (negacao)
+
+SELECT L.titulo, L.ano, A.nome
+FROM Livro L
+JOIN Autor A ON A.id_Autor = L.id_Autor
+WHERE
+NOT A.nome = 'Shakespeare'
+
+
+--Operadores Especiais
+
+--BETWEEN (entre)
+
+SELECT titulo, Ano
+FROM Livro
+WHERE
+ano BETWEEN 1800 AND 2000;
+
+
+-- IN (verifica um alista de valores)
+
+SELECT * FROM Autor
+WHERE Nome IN ('Machado De Assis', 'Shakespeare');
+
+
+--LIKE 
+SELECT Titulo FROM Livro
+WHERE Titulo LIKE 'O%';
+-- (%O = Existe texto antes da letra) (O% = Existe texto depois da letra) (%O% = Existe texto antes e depois da letra
+
+-- IS NULL
+-- Retorna registros vazios
+SELECT Id_Emprestimo, Id_Livro, Data_emprestimo
+FROM Emprestimo 
+WHERE data_devolucao IS NULL;
+
+SELECT ID_emprestimo, ID_Livro, data_emprestimo
+FROM Emprestimo
+WHERE data_devolucao IS NOT NULL;
