@@ -1,0 +1,15 @@
+C:\Users\54930515831\Desktop\BackEnd\C# Introduction\bin\Debug\net9.0\BackEnd.exe
+C:\Users\54930515831\Desktop\BackEnd\C# Introduction\bin\Debug\net9.0\BackEnd.deps.json
+C:\Users\54930515831\Desktop\BackEnd\C# Introduction\bin\Debug\net9.0\BackEnd.runtimeconfig.json
+C:\Users\54930515831\Desktop\BackEnd\C# Introduction\bin\Debug\net9.0\BackEnd.dll
+C:\Users\54930515831\Desktop\BackEnd\C# Introduction\bin\Debug\net9.0\BackEnd.pdb
+C:\Users\54930515831\Desktop\BackEnd\C# Introduction\obj\Debug\net9.0\BackEnd.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\54930515831\Desktop\BackEnd\C# Introduction\obj\Debug\net9.0\BackEnd.AssemblyInfoInputs.cache
+C:\Users\54930515831\Desktop\BackEnd\C# Introduction\obj\Debug\net9.0\BackEnd.AssemblyInfo.cs
+C:\Users\54930515831\Desktop\BackEnd\C# Introduction\obj\Debug\net9.0\BackEnd.csproj.CoreCompileInputs.cache
+C:\Users\54930515831\Desktop\BackEnd\C# Introduction\obj\Debug\net9.0\BackEnd.sourcelink.json
+C:\Users\54930515831\Desktop\BackEnd\C# Introduction\obj\Debug\net9.0\BackEnd.dll
+C:\Users\54930515831\Desktop\BackEnd\C# Introduction\obj\Debug\net9.0\refint\BackEnd.dll
+C:\Users\54930515831\Desktop\BackEnd\C# Introduction\obj\Debug\net9.0\BackEnd.pdb
+C:\Users\54930515831\Desktop\BackEnd\C# Introduction\obj\Debug\net9.0\BackEnd.genruntimeconfig.cache
+C:\Users\54930515831\Desktop\BackEnd\C# Introduction\obj\Debug\net9.0\ref\BackEnd.dll
